@@ -1,6 +1,5 @@
 export default function handler(req, res) {
   const { user } = req.query;
-
   const responses = [
     "is lurking… probably judging silently.",
     "just hit !lurk like they hit shots: occasionally.",
@@ -9,7 +8,7 @@ export default function handler(req, res) {
     "vanished into lurk mode — maybe brb, maybe Netflix.",
     "is lurking. Definitely not rage-quitting.",
     "entered silent mode… batteries not included.",
-    "is now in spectator mode — no backseating.",
+    "is now spectating — no backseating.",
     "is lurking with snacks and questionable focus.",
     "slipped into the void… still vibing though.",
     "pressed !lurk and walked into the fog of war.",
@@ -33,7 +32,6 @@ export default function handler(req, res) {
     "is lurking with a high ping and chill energy.",
     "joined team Lurk. Perk unlocked: invisibility."
   ];
-
   const random = responses[Math.floor(Math.random() * responses.length)];
   res.status(200).send(`${user} ${random}`);
 }
